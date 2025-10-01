@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThunderMentalist — Upcoming Concerts</title>
+  <meta name="description" content="Upcoming music concerts curated by ThunderMentalist." />
+  <link rel="preload" href="images/thundermentalist.png" as="image" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="tm-header">
+    <div class="tm-header-inner">
+      <img
+        src="images/thundermentalist.png"
+        alt="ThunderMentalist logo"
+        class="tm-logo"
+        width="1240" height="400"
+      />
+      <div class="tm-controls" aria-label="Filters">
+        <label for="genreSelect" class="tm-label">Filter by genre</label>
+        <select id="genreSelect" class="tm-select" aria-label="Filter concerts by genre">
+          <option value="">All genres</option>
+          <!-- options injected by JS -->
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="tm-main">
+    <h1 class="sr-only">Upcoming Concerts</h1>
+    <section id="concertList" aria-live="polite"></section>
+  </main>
+
+  <footer class="tm-footer">
+    <small>
+      Data is loaded from <code>/data/concerts.csv</code>. Times are evaluated in Europe/London.
+    </small>
+  </footer>
+
+  <noscript>
+    <p style="padding:1rem">
+      Please enable JavaScript to view the concerts.
+    </p>
+  </noscript>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
